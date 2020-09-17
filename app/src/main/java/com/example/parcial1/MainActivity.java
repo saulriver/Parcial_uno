@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     //para llamar al contador y acumulador
     private int contador = 0;
     private int acumulador = 0;
-    private int datos = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,13 +79,12 @@ public class MainActivity extends AppCompatActivity {
                     textViewMensajeLimite.setText("Retira registros para seguir ingresando vehiculos.");
                     editTextPlacaVehiculo.setEnabled(false);
                 }
-                //carro cantidad + 3 variables le sumo al carro personas variables le sumo uno si la variable es menor igual guardar sino porqe ya superaste la cantidad
-                int acumulado = 0;
-                int total = 0;
-                acumulador = Integer.parseInt(editTextPlacaVehiculo.getText().toString()) + Integer.parseInt(editTextNumeroPersonas.getText().toString());
-                total = acumulado + acumulador;
+                //le sumo al carro personas variables le sumo uno si la variable es menor igual guardar sino porque ya supere la cantidad
+                acumulador++;
                 editTextCapacidadPlaya.setText("" + acumulador);
-                textViewMensajeLimite.setText("sumo");
+                if (acumulador == 10) {
+                    textViewMensajeLimite.setText("Retira registros para seguir ingresando personas.");
+                }
             }});
 
         //codigo para cuando presionamos en el listView los datos almacenados nos arroje la información en el textView//
@@ -115,8 +113,9 @@ public class MainActivity extends AppCompatActivity {
                     editTextCapacidadParqueadero.getText().clear();
                     textViewMensajeLimite.setText ("Ahora puedes seguir ingresando ");
                 }
-                //con esto si se elimina una placa de un vehiculo que sale se habilita el campo para seguir registrando vehiculos.
+                //cuando se elimina una placa de un vehiculo, se habilita el campo para seguir registrando vehiculos.
                 editTextPlacaVehiculo.setEnabled(true);
+
                 return;
             }
         });
