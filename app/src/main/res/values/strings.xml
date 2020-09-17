@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">parcial1</string>
+    <string name="textView1">Control de parqueo</string>
+    <string name="textView2">Mensajes...</string>
+    <string name="textView3">Capacidad parqueadero</string>
+    <string name="textView4">Capacidad playa</string>
+    <string name="textView5">Placa vehiculo</string>
+    <string name="textView6">N° Personas </string>
+    <string name="textView7">Mensajes...</string>
+    <string name="textView8">Vehiculos en parqueadero</string>
+    <string name="editText1">5</string>
+    <string name="editText2">10</string>
+    <string name="editText3"></string>
+    <string name="editText4"></string>
+    <string name="button1">Registrar</string>
+    <string name="button2">Retirar registro</string>
+
+</resources>
